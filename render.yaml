@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: teampulseai-backend
+    env: node
+    region: oregon
+    plan: free
+    branch: main
+    rootDir: server
+    autoDeploy: true
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+      - key: JWT_SECRET
+      - key: CLIENT_URL
+      - key: NODE_ENV
