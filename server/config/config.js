@@ -1,7 +1,18 @@
-import path from "path";
+export const APP_NAME = "TeamPulseAI";
 
-export const PORT = process.env.PORT ? parseInt(process.env.PORT) : 5001;
-export const DB_DIR = path.join(process.cwd(), "db-storage");
-export const DB_FILE = path.join(DB_DIR, "db.json");
-export const JWT_SECRET = process.env.JWT_SECRET || "team-pulse-secret-key-999";
-export const CRYPTO_SALT = process.env.CRYPTO_SALT || "team_pulse_salt_2026";
+export const ROLES = {
+  ADMIN: "Admin",
+  MANAGER: "Manager",
+  MEMBER: "Member"
+};
+
+// 🔥 Environment configs
+export const PORT = process.env.PORT || 5000;
+
+export const NODE_ENV = process.env.NODE_ENV || "development";
+
+export const MONGO_URI = process.env.MONGO_URI;
+
+export const JWT_SECRET = process.env.JWT_SECRET;
+
+export const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";

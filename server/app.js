@@ -12,6 +12,17 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/", (req, res) => {
+  res.send("🚀 TeamPulseAI API is running successfully");
+});
+
+app.get("/api", (req, res) => {
+  res.json({
+    success: true,
+    message: "TeamPulseAI API is working 🚀"
+  });
+});
+
 app.use("/api", apiRouter);
 
 app.get("/health", (req, res) => {
